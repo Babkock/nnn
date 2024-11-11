@@ -53,14 +53,18 @@
 #define ICON_EXEC          ICON_STR(FA_COG, "", "⚙️ ")
 
 /* Top level and common icons */
+#define ICON_APPLE         ICON_STR(FA_APPLE, "", "")
 #define ICON_ARCHIVE       ICON_STR(FA_FILE_ARCHIVE_O, "", "📦")
+#define ICON_AWESOME       ICON_STR("", "", "")
 #define ICON_BUILD         ICON_STR(FA_WRENCH, "", "")
+#define ICON_BSPWM         ICON_STR("", "", "")
 #define ICON_BUILDFOLDER   ICON_STR(FA_WRENCH, "󱧼", "")
 #define ICON_BRIEFCASE     ICON_STR(FA_BRIEFCASE, "󰃖", "💼")
 #define ICON_C             ICON_STR(MFIZZ_C, "", "🇨 ")
 #define ICON_CHEADER       ICON_STR("\uf0fd", "", "")
 #define ICON_CHANGELOG     ICON_STR(FA_HISTORY, "󰋚", "🔺")
 #define ICON_CHESS         ICON_STR("", "󰄺", "")
+#define ICON_CHROME        ICON_STR(FA_CHROME, "", "")
 #define ICON_CLOJURE       ICON_STR(MFIZZ_CLOJURE, "", "")
 #define ICON_CODE          ICON_STR("", "󰗀", "")
 #define ICON_CONFIGURE     ICON_STR(FILE_CONFIG, "", "🔧")
@@ -213,6 +217,7 @@ static const struct icon_pair icons_name[] = {
 	{".bashrc",     ICON_SHELL,     0},
 	{".cargo",      ICON_RUST,      0},
 	{".config",     ICON_CONFFOLDER, 0},
+	{".DS_Store",   ICON_APPLE,     0},
 	{".git",        ICON_GITFOLDER, 0},
 	{".gitattributes", ICON_GIT,    0},
 	{".gitconfig",  ICON_GIT,       0},
@@ -227,13 +232,22 @@ static const struct icon_pair icons_name[] = {
 	{".zprofile",   ICON_SHELL,     0},
 	{".zshrc",      ICON_SHELL,     0},
 	{".zsh_history", ICON_SHELL,    0},
+	{"authorized_keys", ICON_KEYS,  0},
+	{"awesome",     ICON_AWESOME,   0},
+	{"bashrc",      ICON_SHELL,     0},
 	{"bin",         ICON_CONFFOLDER, 0},
+	{"bspwmrc",     ICON_BSPWM,      0},
 	{"build",       ICON_BUILDFOLDER, 0},
+	{"Cargo.lock",  ICON_RUST,      COLOR_RUST},
 	{"Cargo.toml",  ICON_RUST,      COLOR_RUST},
+	{"chrome-sandbox", ICON_CHROME, 0},
+	{"chrome_crashpad_handler", ICON_CHROME, 0},
 	{"Desktop",     ICON_DESKTOP,   0},
 	{"Documents",   ICON_BRIEFCASE, 0},
 	{"Downloads",   ICON_DOWNLOADS, 0},
 	{"etc",         ICON_CONFFOLDER, 0},
+	{"git",         ICON_GITFOLDER, 0},
+	{"known_hosts", ICON_KEYS,      0},
 	{"lib",         ICON_CODE,      0},
 	{"lib64",       ICON_CODE,      0},
 	{"Music",       ICON_MUSIC,     0},
@@ -242,8 +256,14 @@ static const struct icon_pair icons_name[] = {
 	{"Pictures",    ICON_PICTURES,  0},
 	{"Public",      ICON_PUBLIC,    0},
 	{"Rakefile",    ICON_RUBY,      COLOR_RUBY},
+	{"rc.lua",      ICON_AWESOME,   0},
+	{"resources.pak", ICON_CHROME,  0},
+	{"rustfmt.toml", ICON_RUST,     COLOR_RUST},
+	{"sxhkdrc",     ICON_BSPWM,     0},
+	{"snapshot_blob.bin", ICON_CHROME, 0},
 	{"src",         ICON_BUILDFOLDER, 0},
 	{"Templates",   ICON_TEMPLATES, 0},
+	{"v8_context_snapshot.bin", ICON_CHROME, 0},
 	{"Videos",      ICON_VIDEOS,    0},
 	{"CHANGELOG",   ICON_CHANGELOG, COLOR_DOCS},
 	{"configure",   ICON_BUILD,     0},
@@ -442,6 +462,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"phar",       ICON_EXT_PHP,        0},
 	{"php",        ICON_EXT_PHP,        0},
 	{"pl",         ICON_EXT_PL,         0},
+	{"plist",      ICON_APPLE,          0},
 	{"plx",        ICON_EXT_PL,         0},
 	{"pm",         ICON_EXT_PL,         0},
 	{"png",        ICON_PICTUREFILE,    COLOR_IMAGE},
@@ -472,6 +493,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	/* S */
 	{"s",          ICON_EXT_ASM,        0},
 	{"sass",       ICON_SASS,           COLOR_CSS},
+	{"scpt",       ICON_APPLE,          0},
 	{"scss",       ICON_SASS,           COLOR_CSS},
 	{"sha256",     ICON_SHIELDCHECK,    0},
 	{"sig",        ICON_SHIELDCHECK,    0},
