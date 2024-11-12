@@ -366,6 +366,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"cbr",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"cbz",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"cc",         ICON_CPLUSPLUS,      COLOR_C},
+	{"cfg",        ICON_CONFIGURE,      0},
 	{"cgi",        ICON_EXT_PL,         0},
 	{"class",      ICON_JAVA,           COLOR_JAVA},
 	{"clj",        ICON_CLOJURE,        0},
@@ -393,6 +394,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"doc",        ICON_WORDDOC,        COLOR_DOCUMENT},
 	{"docx",       ICON_WORDDOC,        COLOR_DOCUMENT},
 	{"download",   ICON_CHANGELOG,      0},
+	{"dylib",      ICON_APPLE,          0},
 
 	/* E */
 	{"ejs",        ICON_JAVASCRIPT,     COLOR_JAVASCRIPT},
@@ -493,13 +495,14 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 
 	/* O */
 	{"o",          ICON_EXT_BIN,        0},
+	{"obj",        ICON_EXT_BIN,        0},
 	{"ogg",        ICON_MUSICFILE,      COLOR_AUDIO},
 	{"old",        ICON_CHANGELOG,      0},
 	{"opus",       ICON_MUSICFILE,      COLOR_AUDIO},
 	{"opdownload", ICON_DOWNLOADS,      0},
 	{"org",        ICON_ORG,            COLOR_EMACS},
 	{"otf",        ICON_FONT,           0},
-	{"out",        ICON_LINUX,          0},
+	{"out",        ICON_SCRIPT,         0},
 
 	/* P */
 	{"part",       ICON_CHANGELOG,      0},
@@ -598,8 +601,10 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	/* Y */
 	{"yaml",       ICON_CONFIGURE,      COLOR_DOCUMENT},
 	{"yml",        ICON_CONFIGURE,      COLOR_DOCUMENT},
+	{"yuck",       ICON_EXT_EL,         COLOR_EMACS},
 
 	/* Z */
+	{"z",          ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"zig",		   ICON_ZIG,            COLOR_DOCUMENT},
 	{"zip",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"zsh",        ICON_SCRIPT,         COLOR_SHELL},
