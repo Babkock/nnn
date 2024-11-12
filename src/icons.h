@@ -291,6 +291,7 @@ static const struct icon_pair icons_name[] = {
 	{"php.ini",     ICON_EXT_PHP,   0},
 	{"Pictures",    ICON_PICTURES,  0},
 	{"Public",      ICON_PUBLIC,    0},
+	{"pyproject.toml", ICON_PYTHON, COLOR_PYTHON},
 	{"Rakefile",    ICON_RUBY,      COLOR_RUBY},
 	{"rc.lua",      ICON_AWESOME,   0},
 	{"resources.pak", ICON_CHROME,  0},
