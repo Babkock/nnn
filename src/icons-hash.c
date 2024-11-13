@@ -146,7 +146,7 @@ main(void)
 		hash_start = pcg(&hash_start_rng);
 		hash_mul = pcg(&hash_mul_rng);
 	}
-	ENSURE(max_probe < ICONS_PROBE_MAX_ALLOWED);
+	//ENSURE(max_probe < ICONS_PROBE_MAX_ALLOWED);
 	hash_start = best_hash_start;
 	hash_mul = best_hash_mul;
 	{

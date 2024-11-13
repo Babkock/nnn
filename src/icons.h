@@ -61,6 +61,7 @@
 #define ICON_BUILDFOLDER   ICON_STR(FA_WRENCH, "󱧼", "")
 #define ICON_BRIEFCASE     ICON_STR(FA_BRIEFCASE, "󰃖", "💼")
 #define ICON_C             ICON_STR(MFIZZ_C, "", "🇨 ")
+#define ICON_CACHE         ICON_STR("", "󰝉", "")
 #define ICON_CHEADER       ICON_STR("\uf0fd", "", "")
 #define ICON_CHANGELOG     ICON_STR(FA_HISTORY, "󰋚", "🔺")
 #define ICON_CHESS         ICON_STR("", "󰄺", "")
@@ -102,6 +103,7 @@
 #define ICON_MS_EXCEL      ICON_STR(FILE_EXCEL, "", ICON_WORDDOC)
 #define ICON_MUSIC         ICON_STR(FA_MUSIC, "󱍙", "🎧")
 #define ICON_MUSICFILE     ICON_STR(FA_FILE_AUDIO_O, "", ICON_MUSIC)
+#define ICON_NETFOLDER     ICON_STR("", "󰡰", "")
 #define ICON_NODEJS        ICON_STR(DEV_NODEJS, "", "")
 #define ICON_NPM           ICON_STR(DEV_NPM, "", "")
 #define ICON_OCAML         ICON_STR(FILE_OCAML, "", "")
@@ -115,7 +117,9 @@
 #define ICON_POWERPOINT    ICON_STR(FILE_POWERPOINT, "", "📊")
 #define ICON_PUBLIC        ICON_STR(FA_INBOX, "", "👀")
 #define ICON_PYTHON        ICON_STR(MFIZZ_PYTHON, "", "🐍")
+#define ICON_QT            ICON_STR("", "", "")
 #define ICON_REACT         ICON_STR(FILE_JSX, "", ICON_JAVASCRIPT)
+#define ICON_ROOT          ICON_STR("", "󰉐", "")
 #define ICON_RUBY          ICON_STR(MFIZZ_RUBY, "", "💎")
 #define ICON_RUST          ICON_STR(DEV_RUST, "", "")
 #define ICON_SASS          ICON_STR(DEV_SASS, "", "")
@@ -123,14 +127,20 @@
 #define ICON_SHELL         ICON_STR("", "󱆃", "")
 #define ICON_SHIELDCHECK   ICON_STR("", "󰕥", "")
 #define ICON_SHIELDLOCK    ICON_STR("", "󰦝", "")
+#define ICON_STEAM         ICON_STR(FA_STEAM, "", "")
+#define ICON_STEAMS        ICON_STR(FA_STEAM_SQUARE, "", "")
+#define ICON_SUBLIME       ICON_STR(DEV_SUBLIME, "", "")
 #define ICON_SUBTITLE      ICON_STR(FA_COMMENTS_O, "󰨖", "💬")
 #define ICON_SWAY          ICON_STR("", "", "")
 #define ICON_TEMPLATES     ICON_STR(FA_PAPERCLIP, "󰗇", "📎")
+#define ICON_TEST          ICON_STR("", "󰙨", "")
 #define ICON_TEX           ICON_STR(FILE_TEX, "󰙩", ICON_DOCUMENT)
 #define ICON_TORRENT       ICON_STR(FA_MAGNET, "", "")
 #define ICON_VIDEOFILE     ICON_STR(FA_FILE_MOVIE_O, "", ICON_VIDEOS)
 #define ICON_VIDEOS        ICON_STR(FA_FILM, "", "🎞 ")
 #define ICON_VIM           ICON_STR(DEV_VIM, "", "")
+#define ICON_VISUALSTUDIO  ICON_STR(DEV_VISUALSTUDIO, "", "")
+#define ICON_WEBPACK       ICON_STR(FILE_WEBPACK, "󰜫", "")
 #define ICON_WINCMD        ICON_STR(FA_WINDOWS, "", "")
 #define ICON_WINDLL        ICON_STR(FA_WINDOWS, "", "")
 #define ICON_WINDOWS       ICON_STR(FA_WINDOWS, "", "")
@@ -222,6 +232,7 @@ static const struct icon_pair icons_name[] = {
 	{".bash_logout", ICON_SHELL,    0},
 	{".bash_profile", ICON_SHELL,   0},
 	{".bashrc",     ICON_SHELL,     0},
+	{".cache",      ICON_CACHE,     0},
 	{".cargo",      ICON_RUST,      0},
 	{".config",     ICON_CONFFOLDER, 0},
 	{".doom.d",     ICON_EMACS,     0},
@@ -241,6 +252,7 @@ static const struct icon_pair icons_name[] = {
 	{".nix-profile", ICON_EXT_NIX,   0},
 	{".node_repl_history", ICON_NODEJS, 0},
 	{".python_history", ICON_PYTHON, COLOR_PYTHON},
+	{".spacemacs",  ICON_EMACS,     0},
 	{".ssh",        ICON_KEYFOLDER, 0},
 	{".viminfo",    ICON_VIM,       COLOR_VIM},
 	{".Xauthority", ICON_CONFIGURE, 0},
@@ -262,6 +274,8 @@ static const struct icon_pair icons_name[] = {
 	{"Cargo.toml",  ICON_RUST,      COLOR_RUST},
 	{"chrome-sandbox", ICON_CHROME, 0},
 	{"chrome_crashpad_handler", ICON_CHROME, 0},
+	{"composer.json", ICON_EXT_PHP, 0},
+	{"composer.lock", ICON_EXT_PHP, 0},
 	{"config.def.h", ICON_DWM,      COLOR_C},
 	{"Desktop",     ICON_DESKTOP,   0},
 	{"dmenu",       ICON_DWM,       0},
@@ -270,6 +284,7 @@ static const struct icon_pair icons_name[] = {
 	{"Downloads",   ICON_DOWNLOADS, 0},
 	{"dwm",         ICON_DWM,       0},
 	{"dwm.c",       ICON_DWM,       COLOR_C},
+	{"early-init.el", ICON_EMACS,   COLOR_EMACS},
 	{"etc",         ICON_CONFFOLDER, 0},
 	{"flake.lock",  ICON_EXT_NIX,   COLOR_FSHARP},
 	{"git",         ICON_GITFOLDER, 0},
@@ -292,10 +307,16 @@ static const struct icon_pair icons_name[] = {
 	{"Pictures",    ICON_PICTURES,  0},
 	{"Public",      ICON_PUBLIC,    0},
 	{"pyproject.toml", ICON_PYTHON, COLOR_PYTHON},
+	{"qt5ct",       ICON_QT,        0},
+	{"qt6ct",       ICON_QT,        0},
+	{"qutebrowser", ICON_QT,        0},
 	{"Rakefile",    ICON_RUBY,      COLOR_RUBY},
 	{"rc.lua",      ICON_AWESOME,   0},
 	{"resources.pak", ICON_CHROME,  0},
+	{"root",        ICON_ROOT,      0},
+	{"rust-toolchain.toml", ICON_RUST, COLOR_RUST},
 	{"rustfmt.toml", ICON_RUST,     COLOR_RUST},
+	{"Seed",        ICON_NETFOLDER, 0},
 	{"shard.lock",  ICON_CRYSTAL,   0},
 	{"shard.yml",   ICON_CRYSTAL,   0},
 	{"sway",        ICON_SWAY,      0},
@@ -306,9 +327,15 @@ static const struct icon_pair icons_name[] = {
 	{"sxhkdrc",     ICON_BSPWM,     0},
 	{"snapshot_blob.bin", ICON_CHROME, 0},
 	{"src",         ICON_BUILDFOLDER, 0},
+	{"steam_appid.txt", ICON_STEAM, 0},
+	{"sudoers.d",   ICON_KEYFOLDER, 0},
 	{"Templates",   ICON_TEMPLATES, 0},
+	{"test",        ICON_TEST,      0},
+	{"tests",       ICON_TEST,      0},
+	{"Uploads",     ICON_NETFOLDER, 0},
 	{"v8_context_snapshot.bin", ICON_CHROME, 0},
 	{"Videos",      ICON_VIDEOS,    0},
+	{"webpack.config.js", ICON_WEBPACK, 0},
 	{"CHANGELOG",   ICON_CHANGELOG, COLOR_DOCS},
 	{"configure",   ICON_BUILD,     0},
 	{"config.el",   ICON_EMACS,     COLOR_EMACS},
@@ -356,6 +383,8 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"bin",        ICON_EXT_BIN,        0},
 	{"bmp",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"bmz",        ICON_ARCHIVE,        COLOR_ARCHIVE},
+	{"bns",        ICON_EXT_JSON,       0},
+	{"bsp",        ICON_STEAM,          0},
 	{"bz2",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 
 	/* C */
@@ -387,10 +416,12 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 
 	/* D */
 	{"db",         ICON_DATABASE,       0},
+	{"dbproj",     ICON_VISUALSTUDIO,   0},
 	{"deb",        ICON_EXT_DEB,        COLOR_ARCHIVE},
 	{"diff",       ICON_EXT_DIFF,       0},
-	{"dll",        ICON_SCRIPT,         0},
 	{"djvu",       ICON_DJVU,           COLOR_DOCS},
+	{"dll",        ICON_WINDLL,         0},
+	{"dmg",        ICON_OPTICALDISK,    COLOR_ARCHIVE},
 	{"doc",        ICON_WORDDOC,        COLOR_DOCUMENT},
 	{"docx",       ICON_WORDDOC,        COLOR_DOCUMENT},
 	{"download",   ICON_CHANGELOG,      0},
@@ -425,6 +456,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"gif",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"go",         ICON_EXT_GO,         COLOR_C},
 	{"gpg",        ICON_SHIELDLOCK,     COLOR_ARCHIVE},
+	{"gpg-agent",  ICON_SHIELDLOCK,     COLOR_ARCHIVE},
 	{"gz",         ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"gzip",       ICON_ARCHIVE,        COLOR_ARCHIVE},
 
@@ -507,10 +539,12 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	/* P */
 	{"part",       ICON_CHANGELOG,      0},
 	{"patch",      ICON_EXT_PATCH,      0},
+	{"pcf",        ICON_STEAM,          0},
 	{"pdf",        ICON_PDF,            COLOR_DOCS},
 	{"pgn",        ICON_CHESS,          0},
 	{"phar",       ICON_EXT_PHP,        0},
 	{"php",        ICON_EXT_PHP,        0},
+	{"phy",        ICON_STEAM,          0},
 	{"pl",         ICON_EXT_PL,         0},
 	{"plist",      ICON_APPLE,          0},
 	{"plx",        ICON_EXT_PL,         0},
@@ -519,6 +553,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"pod",        ICON_EXT_PL,         0},
 	{"ppt",        ICON_POWERPOINT,     0},
 	{"pptx",       ICON_POWERPOINT,     0},
+	{"pro",        ICON_QT,             0},
 	{"psb",        ICON_PHOTOSHOP,      0},
 	{"psd",        ICON_PHOTOSHOP,      0},
 	{"pub",        ICON_KEY,            0},
@@ -557,7 +592,18 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"srt",        ICON_SUBTITLE,       0},
 	{"sty",        ICON_TEX,            0},
 	{"sub",        ICON_SUBTITLE,       0},
+	{"sublime-build", ICON_SUBLIME,     0},
+	{"sublime-keymap", ICON_SUBLIME,    0},
+	{"sublime-menu", ICON_SUBLIME,      0},
+	{"sublime-options", ICON_SUBLIME,   0},
+	{"sublime-package", ICON_SUBLIME,   0},
+	{"sublime-project", ICON_SUBLIME,   0},
+	{"sublime-session", ICON_SUBLIME,   0},
+	{"sublime-settings", ICON_SUBLIME,  0},
+	{"sublime-snippet", ICON_SUBLIME,   0},
+	{"sublime-theme", ICON_SUBLIME,     0},
 	{"svg",        ICON_PICTUREFILE,    COLOR_IMAGE},
+	{"swp",        ICON_VIM,            COLOR_VIM},
 
 	/* T */
 	{"tar",        ICON_ARCHIVE,        COLOR_ARCHIVE},
@@ -565,6 +611,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"tga",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"tgz",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"tiff",       ICON_PICTUREFILE,    COLOR_IMAGE},
+	{"tlz",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"torrent",    ICON_TORRENT,        0},
 	{"ts",         ICON_EXT_TS,         COLOR_JAVASCRIPT},
 	{"tsx",        ICON_REACT,          COLOR_REACT},
@@ -573,12 +620,21 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"ttf",        ICON_FONT,           0},
 
 	/* U */
+	{"ui",         ICON_QT,             0},
 
 	/* V */
+	{"vbproj",     ICON_VISUALSTUDIO,   0},
+	{"vcxproj",    ICON_VISUALSTUDIO,   0},
+	{"vdproj",     ICON_VISUALSTUDIO,   0},
 	{"vid",        ICON_VIDEOFILE,      COLOR_VIDEO},
 	{"vim",        ICON_VIM,            COLOR_VIM},
 	{"vimrc",      ICON_VIM,            COLOR_VIM},
+	{"vmt",        ICON_PICTUREFILE,    COLOR_IMAGE},
+	{"vpk",        ICON_STEAMS,         0},
+	{"vtf",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"vtt",        ICON_SUBTITLE,       0},
+	{"vtx",        ICON_STEAM,          0},
+	{"vvd",        ICON_STEAM,          0},
 
 	/* W */
 	{"wasm",       ICON_EXT_BIN,        0},
@@ -586,7 +642,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"wav",        ICON_MUSICFILE,      COLOR_AUDIO},
 	{"webm",       ICON_VIDEOFILE,      COLOR_VIDEO},
 	{"webp",       ICON_PICTUREFILE,    COLOR_IMAGE},
-	{"wma",        ICON_VIDEOFILE,      COLOR_AUDIO},
+	{"wma",        ICON_MUSICFILE,      COLOR_AUDIO},
 	{"wmv",        ICON_VIDEOFILE,      COLOR_VIDEO},
 
 	/* X */
