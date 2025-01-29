@@ -32,30 +32,30 @@
 
 #if defined(__linux__) || defined(MINGW) || defined(__MINGW32__) \
 	|| defined(__MINGW64__) || defined(__CYGWIN__)
-#ifndef _GNU_SOURCE
-#define _GNU_SOURCE
-#endif
-#if defined(__linux__)
-#include <sys/inotify.h>
-#define LINUX_INOTIFY
-#endif
-#if !defined(__GLIBC__)
-#include <sys/types.h>
-#endif
+#  ifndef _GNU_SOURCE
+#  define _GNU_SOURCE
+#  endif
+#  if defined(__linux__)
+#    include <sys/inotify.h>
+#    define LINUX_INOTIFY
+#  endif
+#  if !defined(__GLIBC__)
+#    include <sys/types.h>
+#  endif
 #endif
 #include <sys/resource.h>
 #include <sys/stat.h>
 #include <sys/statvfs.h>
 #if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__)
-#include <sys/types.h>
-#include <sys/event.h>
-#include <sys/time.h>
-#define BSD_KQUEUE
+#  include <sys/types.h>
+#  include <sys/event.h>
+#  include <sys/time.h>
+#  define BSD_KQUEUE
 #elif defined(__HAIKU__)
-#include "../misc/haiku/haiku_interop.h"
-#define HAIKU_NM
+#  include "../misc/haiku/haiku_interop.h"
+#  define HAIKU_NM
 #else
-#include <sys/sysmacros.h>
+#  include <sys/sysmacros.h>
 #endif
 #include <sys/wait.h>
 

@@ -69,6 +69,7 @@
 #define ICON_CLOCK         ICON_STR(FA_CLOCK_O, "", "")
 #define ICON_CLOJURE       ICON_STR(MFIZZ_CLOJURE, "", "")
 #define ICON_CODE          ICON_STR("", "󰗀", "")
+#define ICON_COMPOSER      ICON_STR(DEV_COMPOSER, "", "")
 #define ICON_CONFIGURE     ICON_STR(FILE_CONFIG, "", "🔧")
 #define ICON_CONFFOLDER    ICON_STR("", "", "")
 #define ICON_CPLUSPLUS     ICON_STR(MFIZZ_CPLUSPLUS, "", ICON_C)
@@ -98,6 +99,7 @@
 #define ICON_KEY           ICON_STR("", "", "")
 #define ICON_KEYS          ICON_STR("", "", "")
 #define ICON_KEYFOLDER     ICON_STR("", "󰢬", "")
+#define ICON_LESS          ICON_STR(DEV_LESS, "", "")
 #define ICON_LIBFOLDER     ICON_STR("", "", "")
 #define ICON_LICENSE       ICON_STR(FA_COPYRIGHT, "󰈙", "⚖️ ")
 #define ICON_LINUX         ICON_STR(FA_LINUX, "󰌽", "🐧")
@@ -105,11 +107,13 @@
 #define ICON_MAKEFILE      ICON_STR(FILE_CMAKE, "", "🛠 ")
 #define ICON_MANUAL        ICON_STR(FILE_MANPAGE, "", "❓")
 #define ICON_MS_EXCEL      ICON_STR(FILE_EXCEL, "", ICON_WORDDOC)
+#define ICON_MOZILLA       ICON_STR(DEV_MOZILLA, "", "")
 #define ICON_MUSIC         ICON_STR(FA_MUSIC, "󱍙", "🎧")
 #define ICON_MUSICFILE     ICON_STR(FA_FILE_AUDIO_O, "", ICON_MUSIC)
 #define ICON_NETFOLDER     ICON_STR("", "󰡰", "")
 #define ICON_NODEJS        ICON_STR(DEV_NODEJS, "", "")
 #define ICON_NPM           ICON_STR(DEV_NPM, "", "")
+#define ICON_NPMFOLDER     ICON_STR(DEV_NPM, "", "")
 #define ICON_OCAML         ICON_STR(FILE_OCAML, "", "")
 #define ICON_OPTICALDISK   ICON_STR(LINEA_MUSIC_CD, "", "💿")
 #define ICON_ORG           ICON_STR(FILE_EMACS, "", "")
@@ -141,12 +145,14 @@
 #define ICON_TEMPLATES     ICON_STR(FA_PAPERCLIP, "󰗇", "📎")
 #define ICON_TEST          ICON_STR("", "󰙨", "")
 #define ICON_TEX           ICON_STR(FILE_TEX, "󰙩", ICON_DOCUMENT)
+#define ICON_THUNDERBIRD   ICON_STR("", "", "")
 #define ICON_TORRENT       ICON_STR(FA_MAGNET, "", "")
 #define ICON_TRASH         ICON_STR(OCT_HOME, "", "")
 #define ICON_VIDEOFILE     ICON_STR(FA_FILE_MOVIE_O, "", ICON_VIDEOS)
 #define ICON_VIDEOS        ICON_STR(FA_FILM, "", "🎞 ")
 #define ICON_VIM           ICON_STR(DEV_VIM, "", "")
 #define ICON_VISUALSTUDIO  ICON_STR(DEV_VISUALSTUDIO, "", "")
+#define ICON_VUE           ICON_STR(FILE_VUE, "", "")
 #define ICON_WEBPACK       ICON_STR(FILE_WEBPACK, "󰜫", "")
 #define ICON_WINCMD        ICON_STR(FA_WINDOWS, "", "")
 #define ICON_WINDLL        ICON_STR(FA_WINDOWS, "", "")
@@ -254,6 +260,7 @@ static const struct icon_pair icons_name[] = {
 	{".gitsubmodules", ICON_GIT,    0},
 	{".gnupg",      ICON_KEYFOLDER, 0},
 	{".mailcap",    ICON_MAIL,      0},
+	{".mozilla",    ICON_MOZILLA,   0},
 	{".muttrc",     ICON_CONFIGURE, 0},
 	{".nix-channels", ICON_EXT_NIX,     COLOR_FSHARP},
 	{".nix-defexpr", ICON_EXT_NIX,   0},
@@ -263,10 +270,12 @@ static const struct icon_pair icons_name[] = {
 	{".sqlite_history", ICON_SQLITE, 0},
 	{".spacemacs",  ICON_EMACS,     0},
 	{".ssh",        ICON_KEYFOLDER, 0},
+	{".thunderbird", ICON_THUNDERBIRD, 0},
 	{".viminfo",    ICON_VIM,       COLOR_VIM},
 	{".Xauthority", ICON_CONFIGURE, 0},
 	{".xinitrc",    ICON_SHELL,     0},
 	{".Xresources", ICON_CONFIGURE, 0},
+	{".zcompdump", ICON_CONFIGURE,  0},
 	{".zlogin",     ICON_SHELL,     0},
 	{".zlogout",    ICON_SHELL,     0},
 	{".zprofile",   ICON_SHELL,     0},
@@ -283,8 +292,8 @@ static const struct icon_pair icons_name[] = {
 	{"Cargo.toml",  ICON_RUST,      COLOR_RUST},
 	{"chrome-sandbox", ICON_CHROME, 0},
 	{"chrome_crashpad_handler", ICON_CHROME, 0},
-	{"composer.json", ICON_EXT_PHP, 0},
-	{"composer.lock", ICON_EXT_PHP, 0},
+	{"composer.json", ICON_COMPOSER, 0},
+	{"composer.lock", ICON_COMPOSER, 0},
 	{"config.def.h", ICON_DWM,      COLOR_C},
 	{"Desktop",     ICON_DESKTOP,   0},
 	{"dmenu",       ICON_DWM,       0},
@@ -312,6 +321,7 @@ static const struct icon_pair icons_name[] = {
 	{"localtime",   ICON_CLOCK,     0},
 	{"Mail",        ICON_MAIL,      0},
 	{"Music",       ICON_MUSIC,     0},
+	{"node_modules", ICON_NPMFOLDER, 0},
 	{"nix",         ICON_EXT_NIX,   0},
 	{"package.json", ICON_NODEJS,   0},
 	{"package-lock.json", ICON_NODEJS, 0},
@@ -321,6 +331,7 @@ static const struct icon_pair icons_name[] = {
 	{"pyproject.toml", ICON_PYTHON, COLOR_PYTHON},
 	{"qt5ct",       ICON_QT,        0},
 	{"qt6ct",       ICON_QT,        0},
+	{"QtProject",   ICON_QT,        0},
 	{"qutebrowser", ICON_QT,        0},
 	{"Rakefile",    ICON_RUBY,      COLOR_RUBY},
 	{"rc.lua",      ICON_AWESOME,   0},
@@ -349,6 +360,7 @@ static const struct icon_pair icons_name[] = {
 	{"Trash",       ICON_TRASH,     0},
 	{"Uploads",     ICON_NETFOLDER, 0},
 	{"v8_context_snapshot.bin", ICON_CHROME, 0},
+	{"vendor",      ICON_COMPOSER,  0},
 	{"Videos",      ICON_VIDEOS,    0},
 	{"webpack.config.js", ICON_WEBPACK, 0},
 	{"CHANGELOG",   ICON_CLOCK,     COLOR_DOCS},
@@ -405,7 +417,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"bin",        ICON_EXT_BIN,        0},
 	{"bmp",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"bmz",        ICON_ARCHIVE,        COLOR_ARCHIVE},
-	{"bns",        ICON_EXT_JSON,       0},
+	//{"bns",        ICON_EXT_JSON,       0},
 	{"bsp",        ICON_STEAM,          0},
 	{"bz2",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 
@@ -523,9 +535,11 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"ksh",        ICON_SCRIPT,         COLOR_SHELL},
 
 	/* L */
+	{"less",       ICON_LESS,           COLOR_CSS},
 	{"lha",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"lhs",        ICON_HASKELL,        COLOR_VIM},
 	{"log",        ICON_DOCUMENT,       0},
+	{"lss",        ICON_LESS,           COLOR_CSS},
 	{"lua",        ICON_EXT_LUA,        COLOR_LUA},
 	{"lzh",        ICON_ARCHIVE,        COLOR_ARCHIVE},
 	{"lzma",       ICON_ARCHIVE,        COLOR_ARCHIVE},
@@ -625,15 +639,9 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"sty",        ICON_TEX,            0},
 	{"sub",        ICON_SUBTITLE,       0},
 	{"sublime-build", ICON_SUBLIME,     0},
-	{"sublime-keymap", ICON_SUBLIME,    0},
 	{"sublime-menu", ICON_SUBLIME,      0},
-	{"sublime-options", ICON_SUBLIME,   0},
 	{"sublime-package", ICON_SUBLIME,   0},
 	{"sublime-project", ICON_SUBLIME,   0},
-	{"sublime-session", ICON_SUBLIME,   0},
-	{"sublime-settings", ICON_SUBLIME,  0},
-	{"sublime-snippet", ICON_SUBLIME,   0},
-	{"sublime-theme", ICON_SUBLIME,     0},
 	{"svg",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"swp",        ICON_VIM,            COLOR_VIM},
 
@@ -666,6 +674,7 @@ static const struct icon_pair icons_ext[] = { /* All entries are case-insensitiv
 	{"vtf",        ICON_PICTUREFILE,    COLOR_IMAGE},
 	{"vtt",        ICON_SUBTITLE,       0},
 	{"vtx",        ICON_STEAM,          0},
+	{"vue",        ICON_VUE,            COLOR_JAVASCRIPT},
 	{"vvd",        ICON_STEAM,          0},
 
 	/* W */
